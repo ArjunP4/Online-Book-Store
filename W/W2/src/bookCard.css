@@ -27,10 +27,12 @@ figure img {
 
 figure:hover {
     transform: scale(1.08);
+    box-shadow: 6px 6px 6px rgb(255, 166, 0);
 }
 
 figcaption {
     margin-top: 8px;
     font-size: 14px;
     color: #d0d0d0;
+
 }
