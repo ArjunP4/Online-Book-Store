@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Explore Store</title>
+    <link rel="stylesheet" href="src/style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Explore Our Store</h1>
+    <p>Navigate using the image map</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a> |
+    <a href="categories.html">Categories</a> |
+    <a href="book.html">Books</a> |
+    <a href="map.html">Explore</a> |
+    <a href="register.html">Register</a> |
+    <a href="cart.html">Cart</a> |
+    <a href="contact.html">Contact</a>
+    <style>
+    nav {
+        background-color: #3a3a3a;
+        padding: 12px;
+        text-align: center;
+    }
+
+    nav a {
+        display: inline-block;
+        color: #f0f0f0;
+        text-decoration: none;
+        margin: 0 12px;
+        font-size: 17px;
+        font-weight: bold;
+    }
+
+    nav a:hover {
+        color: #ffa600;
+        text-decoration: none;
+    }
+</style>
+</nav>
+
+<section>
+    <h2>Store Navigation Banner</h2>
+
+    <p>
+        Click different areas of the banner to explore
+        New Arrivals, Best Sellers, and Offers.
+    </p>
+
+    <img src="src/imgMap.png"
+         alt="Online Book Store Navigation Banner"
+         usemap="#storemap"
+         width="800"
+         height="300">
+
+    <map name="storemap">
+    <area shape="rect"
+          coords="0,0,266,300"
+          href="src/books/book1.html"
+          alt="New Arrivals"
+          title="New Arrivals">
+
+    <area shape="rect"
+          coords="266,0,533,300"
+          href="src/books/book2.html"
+          alt="Best Sellers"
+          title="Best Sellers">
+
+    <area shape="rect"
+          coords="533,0,800,300"
+          href="offers.html"
+          alt="Offers"
+          title="View Offers">
+</map>
+
+</section>
+
+<footer>
+    <p>&copy; 2025 Online Book Store</p>
+</footer>
+
+</body>
+</html>
