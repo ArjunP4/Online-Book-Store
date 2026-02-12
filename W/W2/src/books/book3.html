@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Introduction to Algorithms</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../bookCard.css">
+    <link rel="stylesheet" href="book_src/booksstyle.css">
+</head>
+
+<body>
+    <nav class="main-navbar">
+        <a href="../../index.html">Home</a>
+        <a href="../../categories.html">Categories</a>
+        <a href="../../offers.html">Offers</a>
+        <a href="../../cart.html">Cart</a>
+        <a href="../../register.html">Register</a>
+        <a href="../../contact.html">Contact</a>
+    </nav>
+
+    <nav class="book-navbar">
+        <a href="../../book.html">All Books</a>
+        <a href="book1.html">Book 1</a>
+        <a href="book2.html">Book 2</a>
+        <a href="book3.html" class="active">Book 3</a>
+        <a href="book4.html">Book 4</a>
+    </nav>
+<header>
+    <h1>Introduction to Algorithms</h1>
+</header>
+
+<section>
+    <p><strong>Authors:</strong> Cormen, Leiserson, Rivest, Stein</p>
+    <p>
+        This book covers a wide range of algorithms in depth and is considered
+        a standard textbook for algorithm analysis and design.
+    </p>
+    <a href="https://www.amazon.in/Introduction-Algorithms-fourth-Thomas-Cormen-ebook/dp/B094WZNKP2" target="_blank">
+        <img src="book_src/book3img.jpg" alt="The Art of Programming" width="200px" height="300px">
+    </a>
+    <p><strong>Price:</strong> ₹1200</p>
+
+    <h2>Book Details</h2>
+
+    <p id="book-title"></p>
+    <p id="book-price"></p>
+    <p id="book-stock"></p>
+
+    <label>Quantity:</label>
+    <input type="number" id="quantity" min="1" />
+
+    <br><br>
+
+    <button onclick="calculateBill()">Calculate</button>
+
+    <p id="totalPrice"></p>
+    <p id="finalPrice"></p>
+
+    <script src="../../js/book3.js"></script>
+
+    <div id="toast"></div>
+
+    <p>
+        <a href="../../book.html">← Back to Books</a>
+    </p>
+</section>
+
+</body>
+</html>
