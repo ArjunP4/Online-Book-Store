@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>The Art of Programming</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../bookCard.css">
+    <link rel="stylesheet" href="book_src/booksstyle.css">
+</head>
+
+<body>
+
+<nav class="main-navbar">
+    <a href="../../index.html">Home</a>
+    <a href="../../categories.html">Categories</a>
+    <a href="../../offers.html">Offers</a>
+    <a href="../../cart.html">Cart</a>
+    <a href="../../register.html">Register</a>
+    <a href="../../contact.html">Contact</a>
+</nav>
+
+<nav class="book-navbar">
+    <a href="../../book.html">All Books</a>
+    <a href="book1.html" class="active">Book 1</a>
+    <a href="book2.html">Book 2</a>
+    <a href="book3.html">Book 3</a>
+    <a href="book4.html">Book 4</a>
+</nav>
+
+<header>
+    <h1>The Art of Programming</h1>
+</header>
+
+<section>
+    <p><strong>Author:</strong> Donald Knuth</p>
+    <p>
+        This book provides a deep understanding of programming principles,
+        algorithms, and problem-solving techniques. It is widely used by
+        computer science students and professionals.
+    </p>
+
+    <a href="https://books.apple.com/us/book/art-of-computer-programming-the/id849005250" target="_blank">
+        <img src="book_src/book1img.jpg" alt="The Art of Programming">
+    </a>
+
+    <h2>Book Details</h2>
+
+    <p id="book-title"></p>
+    <p id="book-price"></p>
+    <p id="book-stock"></p>
+
+    <label>Quantity:</label>
+    <input type="number" id="quantity" min="1" />
+
+    <br><br>
+
+    <button onclick="calculateBill()">Calculate</button>
+
+    <p id="totalPrice"></p>
+    <p id="finalPrice"></p>
+
+    <script src="../../js/book1.js"></script>
+
+    <div id="toast"></div>
+    
+    <p>
+        <a href="../../book.html">← Back to Books</a>
+    </p>
+</section>
+</body>
+</html>

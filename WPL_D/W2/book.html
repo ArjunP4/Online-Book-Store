@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Books</title>
+    <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="src/bookCard.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Books Collection</h1>
+    <p>Top Picks & Featured Books</p>
+</header>
+
+<nav class="main-navbar">
+    <a href="index.html">Home</a> |
+    <a href="categories.html">Categories</a> |
+    <a href="book.html" class="active">Books</a> |
+    <a href="map.html">Explore</a> |
+    <a href="register.html">Register</a> |
+    <a href="cart.html">Cart</a> |
+    <a href="contact.html">Contact</a>
+
+    <style>
+        nav {
+            background-color: #3a3a3a;
+            padding: 12px;
+            text-align: center;
+        }
+
+        nav a {
+            display: inline-block;
+            color: #f0f0f0;
+            text-decoration: none;
+            margin: 0 12px;
+            font-size: 17px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ffa600;
+        }
+    </style>
+</nav>
+
+<section>
+
+    <div class="category-bar">
+        <button onclick="showCategory('all_books')">All Books</button>
+        <button onclick="showCategory('fundamentals')">Programming Fundamentals</button>
+        <button onclick="showCategory('core')">Core Computer Science</button>
+        <button onclick="showCategory('web')">Web Development</button>
+    </div>
+
+    <div class="search-section">
+        <h3>Search Book</h3>
+        <input type="text" id="searchInput" placeholder="Enter book name">
+        <button onclick="searchBook()">Search</button>
+        <p id="searchResult"></p>
+    </div>
+
+</section>
+
+
+<section>
+    <h2>Featured Books</h2>
+
+    <div id="bookContainer" class="book-grid">
+
+        <figure class="book" data-category="fundamentals">
+            <a href="src/books/book1.html">
+                <img src="src/books/book_src/book1img.jpg" width="150" height="200">
+            </a>
+            <figcaption>
+                <strong>The Art of Programming</strong><br>
+                Donald Knuth<br>
+                <strong>Price:</strong> ₹999
+            </figcaption>
+        </figure>
+
+        <figure class="book" data-category="core">
+            <a href="src/books/book2.html">
+                <img src="src/books/book_src/book2Img.jpg" width="150" height="200">
+            </a>
+            <figcaption>
+                <strong>Clean Code</strong><br>
+                Robert C. Martin<br>
+                <strong>Price:</strong> ₹850
+            </figcaption>
+        </figure>
+
+        <figure class="book" data-category="core">
+            <a href="src/books/book3.html">
+                <img src="src/books/book_src/book3img.jpg" width="150" height="200">
+            </a>
+            <figcaption>
+                <strong>Introduction to Algorithms</strong><br>
+                Cormen et al.<br>
+                <strong>Price:</strong> ₹1200
+            </figcaption>
+        </figure>
+
+        <figure class="book" data-category="web">
+            <a href="src/books/book4.html">
+                <img src="src/books/book_src/book4img.jpg" width="150" height="200">
+            </a>
+            <figcaption>
+                <strong>Web Development Basics</strong><br>
+                John Doe<br>
+                <strong>Price:</strong> ₹650
+            </figcaption>
+        </figure>
+    </div>
+</section>
+
+<section>
+    <h2>Available Programming Books</h2>
+    <ul id="bookList"></ul>
+    <script src="js/bookList.js"></script>
+</section>
+
+<footer>
+    <p>&copy; 2025 Online Book Store</p>
+</footer>
+
+<script>
+function showCategory(category) {
+    console.log("Button clicked! Category:", category);
+    
+    let books = document.querySelectorAll(".book");
+    console.log("Total books found:", books.length);
+
+    document.querySelectorAll('.category-bar button').forEach(btn => {
+        btn.classList.remove('active');
+    });
+
+    books.forEach(function(book) {
+        book.style.display = "none";
+    });
+
+    switch(category) {
+        case "all_books":
+            books.forEach(function(book) {
+                book.style.display = "block";
+            });
+            console.log("Showing all books");
+            break;
+
+        case "fundamentals":
+            let fundBooks = document.querySelectorAll('[data-category="fundamentals"]');
+            fundBooks.forEach(function(book) {
+                book.style.display = "block";
+            });
+            console.log("Showing fundamentals books:", fundBooks.length);
+            break;
+
+        case "core":
+            let coreBooks = document.querySelectorAll('[data-category="core"]');
+            coreBooks.forEach(function(book) {
+                book.style.display = "block";
+            });
+            console.log("Showing core books:", coreBooks.length);
+            break;
+
+        case "web":
+            let webBooks = document.querySelectorAll('[data-category="web"]');
+            webBooks.forEach(function(book) {
+                book.style.display = "block";
+            });
+            console.log("Showing web books:", webBooks.length);
+            break;
+
+        default:
+            console.log("Invalid Category");
+            books.forEach(function(book) {
+                book.style.display = "block";
+            });
+    }
+}
+
+window.addEventListener('DOMContentLoaded', function() {
+    console.log("Page loaded, showing all books");
+    showCategory('all_books');
+});
+</script>
+</body>
+</html>
